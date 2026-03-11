@@ -76,7 +76,7 @@ MiniMes.LotTraceSample
 
 ## 화면 설명
 
-![LOT Trace Screen](../LOT%20Trace%20Screen.png)
+![LOT Trace Screen](../MES_WINFORM.png)
 
 조회 화면은 상단 검색영역, 중앙 결과 그리드, 하단 상태영역의 3단 구조입니다.
 
