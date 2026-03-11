@@ -1,0 +1,102 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>MiniMes.LotTraceSample</RootNamespace>
+    <AssemblyName>MiniMes.LotTraceSample</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <GenerateBindingRedirectsOutputType>false</GenerateBindingRedirectsOutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>$(USERPROFILE)\.nuget\packages\oracle.manageddataaccess\23.26.100\lib\net472\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.threading.tasks.extensions\4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Text.Json">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.text.json\8.0.5\lib\net462\System.Text.Json.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.diagnostics.diagnosticsource\6.0.2\lib\net461\System.Diagnostics.DiagnosticSource.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Formats.Asn1">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.formats.asn1\8.0.1\lib\net462\System.Formats.Asn1.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Memory">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.memory\4.6.0\lib\net462\System.Memory.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Buffers">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.buffers\4.6.0\lib\net462\System.Buffers.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.runtime.compilerservices.unsafe\6.1.0\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors">
+      <HintPath>$(USERPROFILE)\.nuget\packages\system.numerics.vectors\4.6.0\lib\net462\System.Numerics.Vectors.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.data\25.2.5\lib\net462\DevExpress.Data.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.data.desktop\25.2.5\lib\net462\DevExpress.Data.Desktop.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Drawing.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.drawing\25.2.5\lib\net462\DevExpress.Drawing.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.utils\25.2.5\lib\net462\DevExpress.Utils.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v25.2.Core">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.printing.core\25.2.5\lib\net462\DevExpress.Printing.v25.2.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.win.navigation\25.2.5\lib\net462\DevExpress.XtraEditors.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.win.navigation\25.2.5\lib\net462\DevExpress.XtraLayout.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v25.2">
+      <HintPath>$(USERPROFILE)\.nuget\packages\devexpress.win.grid\25.2.5\lib\net462\DevExpress.XtraGrid.v25.2.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+
+  <Target Name="CopyManualAppConfig" AfterTargets="Build">
+    <Copy SourceFiles="App.config" DestinationFiles="$(TargetDir)$(TargetFileName).config" OverwriteReadOnlyFiles="true" />
+  </Target>
+</Project>
